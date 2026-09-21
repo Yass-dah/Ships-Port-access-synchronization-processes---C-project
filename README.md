@@ -21,13 +21,11 @@ Ho previsto dei limiti tra i processi nave, porto e master, e questi sono:
 ` Valori positivi di sup_dem = offerta `
 
 ----------------------------------------------------------------------------
-
 (Invariante di codice) X ogni tipo di merce:
 
-	` l_ton x sup_dem positivi(di ogni porto) = SO_FILL `
+	` l_ton x sup_dem positivi(di ogni porto) = SO_FILL
 	
-	` l_ton x sup_dem negativi(di ogni porto) = SO_FILL `
-	
+	 l_ton x sup_dem negativi(di ogni porto) = SO_FILL `
 ----------------------------------------------------------------------------
 Il punto principale del progetto, ovvero la generazione di merci, è gestita principalmente dal master, poichè ha sotto occhio tutti i porti e le navi sarà in grado di gestire l'assegnazione di tonnellate di merci ai vari porti in modo che l'offerta e la domanda soddisfino SO_FILL senza problemi di arrotondamento(problemi evitati grazie al calcolo di divisbilità tra l_ton e SO_FILL). La creazione di queste è gestita da str_merch che crea stringhe facilmente passabili ai porti come args che poi creano le loro strutture dati my_stock(contenenti info sulle merci).
 Comunicazione
