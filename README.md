@@ -1,14 +1,14 @@
 # Ships & Port platforms access synchronization processes - C project
 
 Il mio progetto, programmato prevalentemente in inglese(per preferenza personale) e commentato in italiano, è programmato esclusivamente in c(non contiene altri programmi o script vari in altri linguaggi) ed è costituito da 3 programmi eseguibili:
-- master.c
-- porto.c
-- nave.c
+- `master.c`
+- `porto.c`
+- `nave.c`
   
 2 moduli contenenti funzioni necessarie e dati necessari a coloro che li usano:
-- module.h(con la relativa implementazione.c)
-- set_module.h(con la relativa implementazione.c) 
-e un Makefile.
+- `module.h`(con la relativa implementazione.c)
+- `set_module.h`(con la relativa implementazione.c) 
+e un `Makefile`.
 
 Ho previsto dei limiti tra i processi nave, porto e master, e questi sono:
 - I processi nave non possono leggere informazioni ne di altri navi 	e ne dei porti e i porti 	non possono leggere informazioni ne di 	altri porti ne di navi, hanno in comune la 	struttura merch in cui 	sono presenti informazioni sulle merci reperibili.
@@ -41,14 +41,10 @@ La stampa avviene ogni giorno(secondo) nel master con segnali che vengono spedit
 ### Lettura info
 L'identificativo dei porti e navi è il proprio pid. Le navi hanno status = <0, 1, 2> che sta per <mare senza carico, mare con carico, in porto>.
 Il porto ha una struttura dati STOCK che lista informazioni delle merci presenti:
-- sup_dem: offerta in positivo e domanda in negativo
-- ship_rec: merce ricevuta in positivo e spedita in negativo
-- qt_reserved:
-
-` (sup_dem > 0) -> quantità riservata da ricevere `
-
-`(sup_dem < 0) -> quantità riservata da spedire `
-- expired: quantità che era in offerta ma adesso scaduta 
-- expired_ship: quantità arrivata ma scaduta in nave
-- not_av: uguale a -1 -> indica che la merce richiesta non è reperibile
+- `sup_dem`: offerta in positivo e domanda in negativo
+- `ship_rec`: merce ricevuta in positivo e spedita in negativo
+- `qt_reserved`:` (sup_dem > 0) -> quantità riservata da ricevere ` , `(sup_dem < 0) -> quantità riservata da spedire `
+- `expired`: quantità che era in offerta ma adesso scaduta 
+- `expired_ship`: quantità arrivata ma scaduta in nave
+- `not_av`: uguale a -1 -> indica che la merce richiesta non è reperibile
 (Tutti questi campi vanno letti come lotti e non come tonnellate se si vuole risalire al valore di tonnellate moltiplicarli per l_ton del tipo di merce gradita)
