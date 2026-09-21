@@ -44,8 +44,10 @@ Il porto ha una struttura dati STOCK che lista informazioni delle merci presenti
 - sup_dem: offerta in positivo e domanda in negativo
 - ship_rec: merce ricevuta in positivo e spedita in negativo
 - qt_reserved:
-	` (sup_dem > 0) -> quantità riservata da ricevere `
-	`(sup_dem < 0) -> quantità riservata da spedire `
+
+` (sup_dem > 0) -> quantità riservata da ricevere `
+
+`(sup_dem < 0) -> quantità riservata da spedire `
 - expired: quantità che era in offerta ma adesso scaduta 
 - expired_ship: quantità arrivata ma scaduta in nave
 - not_av: uguale a -1 -> indica che la merce richiesta non è reperibile
