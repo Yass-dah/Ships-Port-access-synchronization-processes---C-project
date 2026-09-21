@@ -1,12 +1,13 @@
 # Ships & Port platforms access synchronization processes - C project
 
 Il mio progetto, programmato prevalentemente in inglese(per preferenza personale) e commentato in italiano, è programmato esclusivamente in c(non contiene altri programmi o script vari in altri linguaggi) ed è costituito da 3 programmi eseguibili:
-    • master.c
-    • porto.c
-    • nave.c
+- master.c
+- porto.c
+- nave.c
+  
 2 moduli contenenti funzioni necessarie e dati necessari a coloro che li usano:
-    • module.h(con la relativa implementazione.c)
-    • set_module.h(con la relativa implementazione.c) 
+- module.h(con la relativa implementazione.c)
+- set_module.h(con la relativa implementazione.c) 
 e un Makefile.
 
 Ho previsto dei limiti tra i processi nave, porto e master, e questi sono:
