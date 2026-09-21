@@ -35,6 +35,7 @@ Ho massimizzato il più possibile il grado di concorrenza fra processi e ho util
 
 ### Stampa e timing
 La stampa avviene ogni giorno(secondo) nel master con segnali che vengono spediti con la alarm e il signal handler apposito che gestisce ogni giorno la stampa del report e la segnalazione ai porti di controllare merce possibilmente scaduta. Grazie alla variabile globale sec_done siamo in grado anche di terminare la simulazione dopo SO_DAYS. 
+
 ` NB: la domanda nel nostro caso non è mai uguale a 0 poichè abbiamo un campo aggiuntivo not_av con cui riusciamo a gestire la terminazione automatica della simulazione nel caso le navi non 	la stampa di info sulle navi avviene nonostante ci siano navi che abbiano già terminato lavoro(nave in mare senza carico). `
 
 ### Lettura info
@@ -42,8 +43,9 @@ L'identificativo dei porti e navi è il proprio pid. Le navi hanno status = <0, 
 Il porto ha una struttura dati STOCK che lista informazioni delle merci presenti:
 - sup_dem: offerta in positivo e domanda in negativo
 - ship_rec: merce ricevuta in positivo e spedita in negativo
-- qt_reserved: ` (sup_dem > 0) -> quantità riservata da ricevere `
-			   `(sup_dem < 0) -> quantità riservata da spedire `
+- qt_reserved:
+	` (sup_dem > 0) -> quantità riservata da ricevere `
+	`(sup_dem < 0) -> quantità riservata da spedire `
 - expired: quantità che era in offerta ma adesso scaduta 
 - expired_ship: quantità arrivata ma scaduta in nave
 - not_av: uguale a -1 -> indica che la merce richiesta non è reperibile
