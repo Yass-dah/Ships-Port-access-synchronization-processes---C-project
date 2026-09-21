@@ -1,6 +1,6 @@
 # Ships & Port platforms access synchronization processes - C project
 
-Il mio progetto, programmato prevalentemente in inglese(per preferenza personale) e commentato in italiano, è programmato esclusivamente in c(non contiene altri programmi o script vari in altri linguaggi) ed è costituito da 3 programmi eseguibili:
+Il mio progetto, programmato prevalentemente in inglese(per preferenza personale) e commentato in italiano, è programmato esclusivamente in c (non contiene altri programmi o script vari in altri linguaggi) ed è costituito da 3 programmi eseguibili:
 - `master.c`
 - `porto.c`
 - `nave.c`
