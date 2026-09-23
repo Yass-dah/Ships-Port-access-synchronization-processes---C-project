@@ -1,5 +1,5 @@
 # Ships & Port platforms access synchronization processes - C project 
-## OS academic project (02/05/2023)
+## OS academic project (04/09/2024)
 
 Il mio progetto, programmato prevalentemente in inglese(per preferenza personale) e commentato in italiano, è programmato esclusivamente in c (non contiene altri programmi o script vari in altri linguaggi) ed è costituito da 3 programmi eseguibili:
 - `master.c`
